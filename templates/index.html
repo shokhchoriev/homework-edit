@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <form action="{{ url_for('add_task') }}" method="post">
+        <input type="text" placeholder="Task nomi" name="task_name">
+        <button type="submit">Qoshish</button>  
+    </form>
+    <ul>
+        {% for task in tasks %}
+        <li>{{task.title}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
